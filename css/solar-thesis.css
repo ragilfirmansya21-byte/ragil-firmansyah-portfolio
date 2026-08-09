@@ -1,0 +1,53 @@
+.report-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.report,
+.repository-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 15px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.report {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #03182d;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.repository-link {
+  border: 1px solid var(--border);
+  color: var(--secondary);
+}
+
+.report:hover,
+.repository-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(40, 104, 175, .28);
+}
+
+.report span,
+.repository-link span {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 8px;
+  letter-spacing: .12em;
+  opacity: .72;
+}
+
+.report b,
+.repository-link b {
+  font-size: 14px;
+  line-height: 1;
+}

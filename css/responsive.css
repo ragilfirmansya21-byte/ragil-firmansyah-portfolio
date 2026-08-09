@@ -5,3 +5,4 @@
 @media(max-width:560px){footer .footer-links{order:3}}
 @media(max-width:840px){.experience-side{grid-column:2}.project-gallery{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.experience-side{grid-column:auto}.project-gallery{grid-template-columns:1fr}.project-gallery img{height:210px}.doc-actions{grid-column:2;grid-row:2;margin-top:2px}.doc-actions .doc-action{display:inline-flex}}
+@media(max-width:840px){.contact-content{grid-template-columns:1fr}.contact-content .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.contact-content .contact-grid{grid-template-columns:1fr}.form-name-row{grid-template-columns:1fr}.contact-form{padding:21px}}

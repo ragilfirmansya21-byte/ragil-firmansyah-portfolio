@@ -62,4 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 });
     sectionLinks.forEach(([, section]) => activeObserver.observe(section));
   }
+
+  const contactForm = document.querySelector('#contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+
+      const fields = new FormData(contactForm);
+      const firstName = String(fields.get('firstName')).trim();
+      const lastName = String(fields.get('lastName')).trim();
+      const email = String(fields.get('email')).trim();
+      const message = String(fields.get('message')).trim();
+      const composeUrl = new URL('https://mail.google.com/mail/');
+
+      composeUrl.searchParams.set('view', 'cm');
+      composeUrl.searchParams.set('fs', '1');
+      composeUrl.searchParams.set('to', 'ragilfirmansya21@gmail.com');
+      composeUrl.searchParams.set('su', `Portfolio enquiry from ${firstName} ${lastName}`);
+      composeUrl.searchParams.set('body', `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`);
+      window.open(composeUrl.toString(), '_blank', 'noopener');
+    });
+  }
 });
