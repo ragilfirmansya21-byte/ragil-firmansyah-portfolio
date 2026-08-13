@@ -1,0 +1,106 @@
+/* MSIB Batch 7 CFD coursework — supporting evidence, intentionally secondary to the capstone. */
+.coursework {
+  margin: 8px 0 48px;
+  padding: 34px;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(9, 39, 70, .68), rgba(4, 25, 46, .44));
+}
+
+.coursework-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 25px;
+}
+
+.coursework-heading h2 {
+  font-size: clamp(35px, 4vw, 48px);
+}
+
+.coursework-heading > p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+.coursework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.coursework-card {
+  min-height: 152px;
+  padding: 18px;
+  border: 1px solid rgba(130, 177, 225, .2);
+  background: rgba(3, 24, 45, .34);
+}
+
+.coursework-card > span:first-child {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.coursework-card h3 {
+  margin-bottom: 7px;
+  font-size: 24px;
+}
+
+.coursework-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.coursework-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 10px;
+  border: 1px solid rgba(130, 177, 225, .35);
+  background: rgba(13, 49, 84, .45);
+  margin-top: 13px;
+  color: var(--secondary);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.coursework-action:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.coursework-action:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.coursework-note {
+  margin: 21px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .coursework { padding: 25px; }
+  .coursework-heading { display: block; }
+  .coursework-heading > p { margin-top: 15px; }
+  .coursework-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .coursework { padding: 20px; }
+  .coursework-grid { grid-template-columns: 1fr; }
+}

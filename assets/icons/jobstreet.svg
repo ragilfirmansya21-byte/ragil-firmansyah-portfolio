@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JobStreet">
+  <rect width="64" height="64" rx="12" fill="#1558d6"/>
+  <path d="M17 17h10v19.5c0 6.6-3.7 10.5-10 10.5h-3v-9h1.6c1 0 1.4-.4 1.4-1.6V17Z" fill="#fff"/>
+  <path d="M33 17h10v11h4V17h10v30H47V37h-4v10H33V17Z" fill="#fff"/>
+</svg>

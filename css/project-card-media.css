@@ -1,0 +1,25 @@
+/* Consistent project-media frames across desktop and mobile layouts. */
+.project-art,
+.project-card.wide .project-art {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.project-art > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-art.image-contain > img {
+  object-fit: contain;
+  padding: 10px;
+}
+
+@media (max-width: 560px) {
+  .project-art,
+  .project-card.wide .project-art {
+    aspect-ratio: 16 / 10;
+  }
+}
